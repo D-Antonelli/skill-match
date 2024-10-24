@@ -1,0 +1,16 @@
+name: Shared App Workflow
+
+on:
+  workflow_call:
+
+jobs:
+  # Job for installing dependencies and linting code
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ./.github/actions/app-setup
+    - name: Lint
+      run: npm run lint
+
