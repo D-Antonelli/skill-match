@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 // Mock function to analyze job posting
 const analyzeJobPosting = (posting: string) => {
+  console.log(posting)
   // In a real application, this would be an API call to a backend service
   const skills = [
     "React",
